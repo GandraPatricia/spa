@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./style/app.css">
 </head>
 
 <body ng-controller="produtoController as vm" ng-init = "vm.init()">
@@ -45,11 +46,13 @@
                         <td>{{item.nome}}</td>
                         <td>{{item.preco}}</td>
                         <td>
-                            <button class="btn btn-danger"  ng-click="vm.deletarItem($index);">Deletar</button>
+                            <!-- <button class="btn btn-danger"  ng-click="vm.deletarItem($index);">Deletar</button> -->
+                            <i aria-hidden="true"class="fas fa-trash-alt cursor" ng-click="vm.deletarItem(item, $index);" title="Deletar"> </i>
                         </td>
                         <td>
-                            <button class="btn btn-success"  ng-click="vm.carregarItem($index);">Atualizar</button>
-                        <i aria-hidder="true"class="fas fa-edit"> </i>
+                            
+                            <!-- <button class="btn btn-success"  ng-click="vm.carregarItem($index);">Atualizar</button> -->
+                        <i aria-hidden="true"class="fas fa-edit cursor" ng-click="vm.carregarItem(item, $index);" title="Atualizar"> </i>
                         </td>
                     </tr>
                 </tbody>
